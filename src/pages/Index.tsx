@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -107,6 +108,7 @@ const testimonials = [
 ];
 
 const Index = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [isBeforeAfterMode, setIsBeforeAfterMode] = useState<{ [key: number]: boolean }>({});
 
@@ -144,6 +146,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('hero')} className="text-sm font-medium hover:text-primary transition-colors">Главная</button>
               <button onClick={() => scrollToSection('portfolio')} className="text-sm font-medium hover:text-primary transition-colors">Портфолио</button>
               <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
+              <button onClick={() => navigate('/price')} className="text-sm font-medium hover:text-primary transition-colors">Цены</button>
               <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">О нас</button>
               <button onClick={() => scrollToSection('testimonials')} className="text-sm font-medium hover:text-primary transition-colors">Отзывы</button>
               <button onClick={() => scrollToSection('contact')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
