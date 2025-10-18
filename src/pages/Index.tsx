@@ -148,7 +148,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('testimonials')} className="text-sm font-medium hover:text-primary transition-colors">Отзывы</button>
               <button onClick={() => scrollToSection('contact')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
             </div>
-            <Button onClick={() => scrollToSection('contact')}>Консультация</Button>
+
           </div>
         </div>
       </nav>
@@ -166,9 +166,6 @@ const Index = () => {
               <div className="flex gap-4">
                 <Button size="lg" onClick={() => scrollToSection('portfolio')}>
                   Наши работы
-                </Button>
-                <Button size="lg" variant="outline" onClick={() => scrollToSection('contact')}>
-                  Получить расчёт
                 </Button>
               </div>
             </div>
@@ -335,9 +332,7 @@ const Index = () => {
               <div className="opacity-90">Москва, ул. Примерная, 15</div>
             </div>
           </div>
-          <Button size="lg" variant="secondary" className="bg-white text-secondary hover:bg-white/90">
-            Получить консультацию
-          </Button>
+
         </div>
       </section>
 
